@@ -1,2 +1,3 @@
-import helloworld
-import randomnum
+def test_run():
+    import helloworld
+    import randomnum
