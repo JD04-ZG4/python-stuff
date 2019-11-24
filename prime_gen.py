@@ -13,8 +13,10 @@ def get_int(text):
             return usr_input
         except ValueError:
             print('Not an integer')
-stop = get_int('What number should the script stop at? (-1 is a bad idea)\n')
-num=2
+start = get_int('What number should the script start at?\n')
+stop = get_int('What number should the script stop at? (entering a number before the start point is a bad idea)\n')
+print()
+num=start
 primes = []
 find = True
 while find:
