@@ -7,9 +7,20 @@ def is_prime(num):
     return True        
 num=2
 primes = []
-while True:
+get_stop = True
+while get_stop:
+    stop = input('What number should the script stop at? (-1 is a bad idea)\n')
+    try:
+        stop = int(stop)
+        get_stop = False
+    except ValueError:
+        print('Not an integer')
+find = True
+while find:
     ip = is_prime(num)
     if ip:
         primes.append(num)
         print(num)
+    if num == stop:
+        find = False
     num += 1
