@@ -16,8 +16,12 @@ def get_int(text):
             return usr_input # If the input was valid, the value is returned
         except ValueError:
             print('Not an integer') # If the integer conversion failed, The user is notified and it loops
-num = get_int('What number should the script start at?\n') #Gets the integer to start at
-stop = get_int('What number should the script stop at? (entering a number before the start point is a bad idea)\n') #Gets the integer to finish at
+try:
+    num = get_int('What number should the script start at?\n') #Gets the integer to start at
+    stop = get_int('What number should the script stop at? (entering a number before the start point is a bad idea)\n') #Gets the integer to finish at
+except: # Assigns default values when being tested
+    num = 2
+    stop = 1000
 print() # Prints a new line to make reading the output more clear
 primes = [] # Creates an empty list to store primes in
 find = True # Creates the variable for the script to loop
