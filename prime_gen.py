@@ -4,17 +4,18 @@ def is_prime(num):
     for i in range(2,num):
         if num%i == 0:
             return False
-    return True        
+    return True
+def get_int(text):
+    while True:
+        usr_input = input(text)
+        try:
+            usr_input = int(usr_input)
+            return usr_input
+        except ValueError:
+            print('Not an integer')
+stop = get_int('What number should the script stop at? (-1 is a bad idea)\n')
 num=2
 primes = []
-get_stop = True
-while get_stop:
-    stop = input('What number should the script stop at? (-1 is a bad idea)\n')
-    try:
-        stop = int(stop)
-        get_stop = False
-    except ValueError:
-        print('Not an integer')
 find = True
 while find:
     ip = is_prime(num)
