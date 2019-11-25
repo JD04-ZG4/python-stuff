@@ -19,7 +19,7 @@ def get_int(text):
 try:
     num = get_int('What number should the script start at?\n') #Gets the integer to start at
     stop = get_int('What number should the script stop at? (entering a number before the start point is a bad idea)\n') #Gets the integer to finish at
-except: # Assigns default values when being tested
+except IOError: # Assigns default values when being tested
     num = 2
     stop = 1000
 print() # Prints a new line to make reading the output more clear
